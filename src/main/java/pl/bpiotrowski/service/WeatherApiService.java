@@ -25,6 +25,7 @@ public class WeatherApiService {
         this.resourceLoader = resourceLoader;
     }
 
+    @ExecutionTimeLog
     public WeatherData fetchWeather() {
         try {
             Resource resource = resourceLoader.getResource("https://api.openweathermap.org/data/2.5/weather?q=Gdansk&APPID=" + apiKey + "&units=metric");

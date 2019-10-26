@@ -8,6 +8,7 @@ import pl.bpiotrowski.ui.UserInterface;
 @Configuration
 @ComponentScan("pl.bpiotrowski")
 @PropertySource("application.properties")
+@EnableAspectJAutoProxy
 public class Application {
 
     public static void main(String[] args) {
