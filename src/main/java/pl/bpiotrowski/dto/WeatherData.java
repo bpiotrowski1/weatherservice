@@ -1,8 +1,11 @@
 package pl.bpiotrowski.dto;
 
 import lombok.Getter;
+import lombok.Setter;
 
+@Getter
 public class WeatherData {
-    @Getter String name;
-    @Getter Weather[] weather;
+    String name;
+    Weather[] weather;
+    @Setter Long timestamp;
 }

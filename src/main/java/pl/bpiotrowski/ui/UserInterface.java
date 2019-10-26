@@ -16,12 +16,12 @@ public class UserInterface {
 
     public void start() {
         WeatherData weatherData;
-        String var = "y";
+        String city = "gdansk";
         Scanner in = new Scanner(System.in);
-        while (var.equals("y")) {
-            weatherData = weatherApiService.fetchWeather();
+        while (!city.equals("n")) {
+            weatherData = weatherApiService.fetchWeather(city);
             System.out.println("Weather in " + weatherData.getName() + ": " + weatherData.getWeather()[0].getDescription());
-            var = in.nextLine();
+            city = in.nextLine();
         }
     }
 }
